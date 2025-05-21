@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Myy first JS page</title>
+    <script>
+      alert("Welcome to my awesome website!");
+      document.write(
+        "I enjoy playing basketball. My favorite player is flight reacts."
+      );
+      console.log("I'm the best player in this classroom including MS.H");
+      
+      function changeText() {
+        document.getElementById("myParagraph").innerHTML =
+          "Congratulations! You clicked a button, doing the bare minimum! Good job!";
+      }
+      function gay() {
+        document.getElementById("Changed-the-id").innerHTML =
+          "Good job! keep it up!";
+      }
+    </script>
+  </head>
+  <body>
+    <h1>JavaScript is cool</h1>
+    <p>Open the console to see more.</p>
+
+    <p id="myParagraph">This text will change when you click the button</p>
+    <button onclick="changeText()">Press me or else I will press you!</button>
+
+    <p id="Changed-the-id">This text will change when you click the button</p>
+    <button onclick="gay()">Second selector</button>
+  </br>
+
+    <button
+      onclick="document.getElementById('myImage').src='sga.webp'">
+      Turn on the light
+    </button>
+
+    <img
+      id="myImage"
+      src="sga.webp"
+      style="width: 100px" />
+
+    <button
+      onclick="document.getElementById('myImage').src='ant.jpg'">
+      Turn off the light
+    </button>
+  </body>
+</html>
