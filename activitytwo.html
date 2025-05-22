@@ -1,0 +1,114 @@
+<!--Create a cursor-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NYC VS PACERS</title>
+    <style>
+      html {
+        height: 100%;
+        line-height: 140%;
+        letter-spacing: 1px;
+        word-spacing: 0.9px;
+        font-size: 1.2rem;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background-color: orange;
+        margin: 0 20;
+        text-align: center;
+        color: yellow;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+        font-weight: bold;
+        color: orange;
+      }
+
+      p {
+        font-size: 1.2em;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      main {
+        padding: 20px;
+        background-color: #0f0a7c;
+      }
+
+      img {
+        width: auto;
+        height: 500px;
+      }
+
+      button {
+        width: 400px;
+        border: none;
+        padding: 15px;
+        background-color: orange;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      console.log("Did something work like a image change?");
+
+      var x = prompt("Who will win this series, to advance to the finals?");
+
+      document.write("You think the " + x + " are going to win this series!");
+
+      let count = 0;
+
+      function counter() {
+        count = count + 1;
+        document.getElementById("counter").innerHTML = count;
+      }
+
+      function changeImages() {
+        document.getElementById("hali-choke-image").src = "HAelly.avif";
+      }
+
+      function showOriginalImage() {
+    document.getElementById("hali-choke-image").src = "hali-choke-imagn.webp";
+  }
+
+  document.getElementById("text1").innerHTML = "Paragraph 1 has been changed!";
+
+  document.getElementById("text2").style.color = "red"; 
+
+  const box = document.getElementById("box");
+      box.style.backgroundColor = "blue";
+      box.style.color = "white";
+      box.style.borderRadius = "10px";
+      box.style.fontWeight = "bold";
+
+    </script>
+
+    <main>
+      <h1>NYC VS PACERS GAME 1</h1>
+      <p id="text1">
+        Tyrese Haliburton recreating Reggie Millers Iconic Choking Celly, after
+        sending to game to OT
+      </p>
+      <img
+        id="hali-choke-image"
+        src="hali-choke-imagn.webp"
+        alt="Pacers icon choke" />
+    </br>
+      <button onclick="changeImages()">Change Haliburton Image</button>
+      <button onclick="showOriginalImage()">Show Original Image</button>
+
+      <h1>Who will win?</h1>
+      <p id="text2">
+        Jalen Brunson, A Free throw merchant. Dropping 43 Points Last Night.
+      </p>
+      <img src="jalen.jpg" alt="Jalen Burunson NYC" />
+    </br>
+    <p id="counter">0</p>
+    <button onclick="counter()">Vote Here For New York Knicks</button>
+    </main>
+  </body>
+</html>
