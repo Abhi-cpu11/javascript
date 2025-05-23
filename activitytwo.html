@@ -52,14 +52,13 @@
         text-align: center;
       }
 
-  /*https://www.youtube.com/watch?v=2glfqa-ZbNw*/
+      /*https://www.youtube.com/watch?v=2glfqa-ZbNw*/
 
       #clock-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
-
+        flex-direction: column;
       }
 
       #clock {
@@ -68,106 +67,94 @@
         font-family: monospace;
         text-align: center;
         color: white;
-        backdrop-filter: blur(5px);
-        width: 100%;
+        display: block;
       }
     </style>
   </head>
   <body>
-    <script>
-      console.log("Did something work like a image change?");
-
-      var x = prompt("Who will win this series, to advance to the finals?");
-
-      document.write("You think the " + x + " are going to win this series!");
-
-      let count = 0;
-
-      function counter() {
-        count = count + 1;
-        document.getElementById("counter").innerHTML = count;
-      }
-
-      function changeImages() {
-        document.getElementById("hali-choke-image").src = "HAelly.avif";
-      }
-
-      function showOriginalImage() {
-    document.getElementById("hali-choke-image").src = "hali-choke-imagn.webp";
-
-    function updateClock() {
-      const now = new Date();
-      const hours = now.getHours() .toString().padStart(2, "0");
-      const minutes = now.getMinutes() .toString().padStart(2, "0");
-      const seconds = now.getSeconds() .toString().padStart(2, "0");
-      const timeString = `${hours}:${minutes}:${seconds}`;
-      document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
-    }
-  }
-
-  updateClock();
-  setInterval(updateClock, 1000);
-  
-
-  /*https://www.youtube.com/watch?v=2glfqa-ZbNw*/
-
-</script>
+    <!-- replace document.write with this placeholder -->
+    <p id="result"></p>
 
     <main>
       <h1>NYC VS PACERS GAME 1</h1>
       <p id="text1">
-        <button onclick="document.getElementById('text1').innerHTML = 'Paragraph 1 has been changed!'">
-          Change Paragraph
-        </button>
-      </br>
+        <button
+          onclick="document.getElementById('text1').innerHTML = 'Paragraph 1 has been changed!'">
+          Change Paragraph</button
+        ></br>
         Tyrese Haliburton recreating Reggie Millers Iconic Choking Celly, after
         sending to game to OT
       </p>
       <img
         id="hali-choke-image"
         src="hali-choke-imagn.webp"
-        alt="Pacers icon choke" />
-    </br>
+        alt="Pacers icon choke" /></br>
       <button onclick="changeImages()">Change Haliburton Image</button>
       <button onclick="showOriginalImage()">Show Original Image</button>
 
       <h1 id="multi-verse">
-
-<button onclick="document.getElementById('multi-verse').style.cssText = 'color: red; font-style: italic; font-size: 35px;'">
-  Style the Heading
-</button>
-</br>
-</br>
-Who will win?</h1>
-
-
+        <button
+          onclick="document.getElementById('multi-verse').style.cssText = 'color: red; font-style: italic; font-size: 35px;'">
+          Style the Heading</button
+        ></br></br>
+        Who will win?
+      </h1>
 
       <p id="demo2">
         <button onclick="document.getElementById('demo2').style.color = 'red'">
-          Make The text red
-        </button>
-      </br>
+          Make The text red</button
+        ></br>
         Jalen Brunson, A Free throw merchant. Dropping 43 Points Last Night.
       </p>
-      <img src="jalen.jpg" alt="Jalen Burunson NYC" />
-    </br>
-    <p id="counter">0</p>
-    <button onclick="counter()">Vote Here For New York Knicks</button>
-
-    
-<!--*https://www.youtube.com/watch?v=2glfqa-ZbNw*-->
-
-    <div id="Clock-container">
-      <div id="clock">00:00:00</p>
+      <img src="jalen.jpg" alt="Jalen Burunson NYC" /></br>
+      <p id="counter">0</p>
+      <button onclick="counter()">Vote Here For New York Knicks</button>
+    </br></br>
+      <div id="clock-container">
+        <div id="clock">00:00:00</div>
+      </br>
+        <p>The next game will be at 19:00:00, Tonight</p>
+      </div>
+      
+      <button onclick="console.log(count)"></button>
+      
     </main>
+
     <script>
-  
-  
-    /*document.getElementById("multi-verse");
-        .style.backgroundColor = "blue";
-        .style.color = "white";
-        .style.borderRadius = "10px";
-        style.fontWeight = "bold"; */
-      </script>
+      
+
+      // prompt result goes into the <p id="result">
+      var x = prompt("Who will win this series, to advance to the finals?");
+      document.getElementById("result").innerText =
+        "You think the " + x + " are going to win this series!";
+      
+      let count = 0;
+      function counter() {
+        count += 1;
+        document.getElementById("counter").innerText = count;
+      }
+
+      function changeImages() {
+        document.getElementById("hali-choke-image").src = "HAelly.avif";
+      }
+      function showOriginalImage() {
+        document.getElementById("hali-choke-image").src =
+          "hali-choke-imagn.webp";
+      }
+      /*https://www.youtube.com/watch?v=2glfqa-ZbNw*/
+      function updateClock() {
+        const now = new Date();
+        const hours = now.getHours().toString().padStart(2, "0");
+        const minutes = now.getMinutes().toString().padStart(2, "0");
+        const seconds = now.getSeconds().toString().padStart(2, "0");
+        document.getElementById("clock").innerText =
+          hours + ":" + minutes + ":" + seconds;
+      }
+
+      updateClock();
+      setInterval(updateClock, 1000);
+
+      
+    </script>
   </body>
 </html>
