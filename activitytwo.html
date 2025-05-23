@@ -74,22 +74,15 @@
       function showOriginalImage() {
     document.getElementById("hali-choke-image").src = "hali-choke-imagn.webp";
   }
-
-  document.getElementById("text1").innerHTML = "Paragraph 1 has been changed!";
-
-  document.getElementById("text2").style.color = "red"; 
-
-  const box = document.getElementById("box");
-      box.style.backgroundColor = "blue";
-      box.style.color = "white";
-      box.style.borderRadius = "10px";
-      box.style.fontWeight = "bold";
-
-    </script>
+</script>
 
     <main>
       <h1>NYC VS PACERS GAME 1</h1>
       <p id="text1">
+        <button onclick="document.getElementById('text1').innerHTML = 'Paragraph 1 has been changed!'">
+          Change Paragraph
+        </button>
+      </br>
         Tyrese Haliburton recreating Reggie Millers Iconic Choking Celly, after
         sending to game to OT
       </p>
@@ -101,8 +94,21 @@
       <button onclick="changeImages()">Change Haliburton Image</button>
       <button onclick="showOriginalImage()">Show Original Image</button>
 
-      <h1>Who will win?</h1>
-      <p id="text2">
+      <h1 id="multi-verse">
+
+<button onclick="document.getElementById('multi-verse').style.cssText = 'color: red; font-style: italic; font-size: 35px;'">
+  Style the Heading
+</button>
+</br>
+Who will win?</h1>
+
+
+
+      <p id="demo2">
+        <button onclick="document.getElementById('demo2').style.color = 'red'">
+          Make The text red
+        </button>
+      </br>
         Jalen Brunson, A Free throw merchant. Dropping 43 Points Last Night.
       </p>
       <img src="jalen.jpg" alt="Jalen Burunson NYC" />
@@ -110,5 +116,14 @@
     <p id="counter">0</p>
     <button onclick="counter()">Vote Here For New York Knicks</button>
     </main>
+    <script>
+  
+  
+    /*document.getElementById("multi-verse");
+        .style.backgroundColor = "blue";
+        .style.color = "white";
+        .style.borderRadius = "10px";
+        style.fontWeight = "bold"; */
+      </script>
   </body>
 </html>
