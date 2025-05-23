@@ -12,6 +12,7 @@
         letter-spacing: 1px;
         word-spacing: 0.9px;
         font-size: 1.2rem;
+        margin: 0;
       }
       body {
         font-family: Arial, sans-serif;
@@ -50,6 +51,26 @@
         background-color: orange;
         text-align: center;
       }
+
+  /*https://www.youtube.com/watch?v=2glfqa-ZbNw*/
+
+      #clock-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+      }
+
+      #clock {
+        font-size: 48px;
+        font-weight: bold;
+        font-family: monospace;
+        text-align: center;
+        color: white;
+        backdrop-filter: blur(5px);
+        width: 100%;
+      }
     </style>
   </head>
   <body>
@@ -73,7 +94,23 @@
 
       function showOriginalImage() {
     document.getElementById("hali-choke-image").src = "hali-choke-imagn.webp";
+
+    function updateClock() {
+      const now = new Date();
+      const hours = now.getHours() .toString().padStart(2, "0");
+      const minutes = now.getMinutes() .toString().padStart(2, "0");
+      const seconds = now.getSeconds() .toString().padStart(2, "0");
+      const timeString = `${hours}:${minutes}:${seconds}`;
+      document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds}`;
+    }
   }
+
+  updateClock();
+  setInterval(updateClock, 1000);
+  
+
+  /*https://www.youtube.com/watch?v=2glfqa-ZbNw*/
+
 </script>
 
     <main>
@@ -116,6 +153,12 @@ Who will win?</h1>
     </br>
     <p id="counter">0</p>
     <button onclick="counter()">Vote Here For New York Knicks</button>
+
+    
+<!--*https://www.youtube.com/watch?v=2glfqa-ZbNw*-->
+
+    <div id="Clock-container">
+      <div id="clock">00:00:00</p>
     </main>
     <script>
   
