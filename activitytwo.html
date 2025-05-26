@@ -1,4 +1,4 @@
-<!--Create a cursor-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -79,7 +79,7 @@
       <h1>NYC VS PACERS GAME 1</h1>
       <p id="text1">
         <button
-          onclick="document.getElementById('text1').innerHTML = 'Paragraph 1 has been changed!'">
+          onclick="document.getElementById('text1').innerHTML = 'Why is his shorts so short? Baggy>short shorts'">
           Change Paragraph</button
         ></br>
         Tyrese Haliburton recreating Reggie Millers Iconic Choking Celly, after
@@ -110,21 +110,18 @@
       <p id="counter">0</p>
       <button onclick="counter()">Vote Here For New York Knicks</button>
     </br></br>
+    
       <div id="clock-container">
         <div id="clock">00:00:00</div>
       </br>
-        <p>The next game will be at 19:00:00, Tonight</p>
+        <p>The next game will be at 19:00:00, Tommorow night</p>
       </div>
-      
       <button onclick="console.log(count)"></button>
-      
     </main>
 
     <script>
-      
-
       // prompt result goes into the <p id="result">
-      var x = prompt("Who will win this series, to advance to the finals?");
+      var x = prompt("Who will win this series between New York knicks and Pacers, to advance to the finals?");
       document.getElementById("result").innerText =
         "You think the " + x + " are going to win this series!";
       
@@ -137,10 +134,12 @@
       function changeImages() {
         document.getElementById("hali-choke-image").src = "HAelly.avif";
       }
+
       function showOriginalImage() {
         document.getElementById("hali-choke-image").src =
           "hali-choke-imagn.webp";
       }
+
       /*https://www.youtube.com/watch?v=2glfqa-ZbNw*/
       function updateClock() {
         const now = new Date();
@@ -153,8 +152,6 @@
 
       updateClock();
       setInterval(updateClock, 1000);
-
-      
     </script>
   </body>
 </html>
