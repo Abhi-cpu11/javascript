@@ -1,0 +1,90 @@
+<!--The three ppl who reviewed my thing are nihal, Ibrahim, and Charan.
+Regarding my feedback my madlib is good said by Charan Gambhir, he said " the story is creative
+".He didnt notice any flaws in my madlib that he saw.
+Nihal said the good thing it works and looks appealing. The bad thing is the prompt he put in didn't make sense but 
+that is because he might inputed the wrong prompts..
+The overall feedback was positive, they liked the creativity and the structure of the madlib.
+The things I learned so far about JavaScript is ? -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mad Lib Story</title>
+    <style>
+      html {
+        background-color: rgb(5, 5, 66);
+      }
+
+      .madlib {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: auto;
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      h2 {
+        font-family: "Courier New", Courier, monospace;
+        color: #ff9500;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+
+      p {
+        color: #f0f0f0;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="madlib">
+      <h2>Mad Lib Story</h2>
+      <p id="story"></p>
+    </div>
+
+    <script>
+      let name = prompt("Enter a name:");
+      let food = prompt("Enter a type of food:");
+      let verb = prompt("Enter a verb:");
+      let place = prompt("Enter a place:");
+      let emotion = prompt("Enter an emotion:");
+      let adjective = prompt("Enter an adjective:");
+      let animal = prompt("Enter an animal:");
+      let verb2 = prompt("Enter another verb:");
+      let place2 = prompt("Enter another place:");
+
+      let paragraph1 =
+        name +
+        " was feeling very " +
+        emotion +
+        " when they went to the " +
+        place +
+        ".";
+
+      let paragraph2 =
+        "They saw a " +
+        adjective +
+        " " +
+        animal +
+        " that " +
+        verb +
+        " straight into a pile of " +
+        food +
+        ", then " +
+        verb2 +
+        " away toward the " +
+        place2 +
+        "!";
+
+      let story = paragraph1 + " " + paragraph2;
+
+      alert(story);
+      document.write("<h2>Abhi Kalkats Mad Lib Story</h2>");
+      document.write("<p>" + story + "</p>");
+    </script>
+  </body>
+</html>
